@@ -4,24 +4,12 @@ import { AppRegistry, View } from 'react-native';
 export default class FixedDimensionsBasics extends Component {
 
 
-    colorizedStyle(color) {
-        var standardSizeMap = {width : 50, height: 50};
-        return  {...standardSizeMap, ...{backgroundColor: color}};
-    }
     render() {
-
-
-
         return (
-
-            <View style = {{flex: 1}}>
-                <View style={{flex: 1, backgroundColor: 'powderblue', flexDirection: 'column'}}>
-                    <View style={{flex: 1, backgroundColor: 'red'}}/>
-                    <View style={this.colorizedStyle('yellow')}/>
-                    <View style={this.colorizedStyle('green')}/>
-                </View>
-                <View style={{flex: 2, backgroundColor: 'skyblue'}} />
-                <View style={{flex: 3, backgroundColor: 'steelblue'}} />
+            <View style = {{flex: 1, flexDirection: 'column', justifyContent: 'space-between'}}>
+                <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}}/>
+                <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
+                <View style={{width: 50, height:50, backgroundColor: 'steelblue'}} />
             </View>
         );
     }
